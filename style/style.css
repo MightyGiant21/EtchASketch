@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --viewHeight: 80vh;
+    --cellSize: calc(var(--viewHeight) / var(--howManyColumns));
+    --howManyColumns: 0
+}
+
+.etchBoard {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: repeat(var(--howManyColumns), auto);
+}
+
+.cell {
+    height: var(--cellSize);
+    width: var(--cellSize);
+    border: 0.1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.active {
+    background-color: green;
+}
+
+button {
+    position: absolute;
+    margin-left: 47vw;
+    margin-top: 20px;
+    background-color: rgb(113, 187, 44);
+    border: none;
+    width: 5rem;
+    height: 2rem;
+    font-size: 25px;
+    border-radius: 5px;
+}
